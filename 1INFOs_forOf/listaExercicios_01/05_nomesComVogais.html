@@ -6,11 +6,15 @@
     //Identifique os nomes que começam com qualquer vogal (A, E, I, O, U) e apresente os nomes em ordem alfabética.
 
     //ENTRADA
-
-
+    let listaDeNomes = ["Amanda", "Eduardo", "Fábio", "Evelin", "César", "José", "Ivo", "Eva", "Otávio", "Inez", "Osmar", "Ulisses"];
+    let vogal = [];
     //PROCESSAMENTO
-
+    for (nome of listaDeNomes) {
+        if ((nome.toUpperCase()).indexOf("A") === 0 || (nome.toUpperCase()).indexOf("E") === 0 || (nome.toUpperCase()).indexOf("I") === 0 || (nome.toUpperCase()).indexOf("O") === 0 || (nome.toUpperCase()).indexOf("U") === 0) {
+            vogal.push(nome)
+        }
+    }
 
     //SAÍDA
-
+    document.write (`A lista original é: ${listaDeNomes.join(", ")}. </br> Os nomes que começam com vogais são: ${vogal.sort().join(", ")}.`)
 </script>
