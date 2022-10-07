@@ -7,14 +7,17 @@
 
     //ENTRADA
     let listaDeNumeros = [1, 2.5, -3, 4, 8.9, 4.789, -25.6, 42];
-    let intPos = [];
+    let listaIntPos = [];
+    let ListaOutros = [];
+
     //PROCESSAMENTO
-    for (numero of listaDeNumeros) {
-        if (numero.isInteger() && numero >= 0){
-            intPos.push(numero)
+    for (let numero of listaDeNumeros) {
+        if (numero > 0 && numero % 1 === 0) {
+            listaIntPos.push(numero);
+        } else {
+            ListaOutros.push(numero);
         }
     }
-
     //SAÍDA
-    document.write(`A lista original: ${listaDeNumeros.join(", ")}. </br> A lista de inteiros e positivos é: ${intPos.join(", ")}`) 
+    document.write(`Os números inteiros e positivos são: ${listaIntPos.join(", ")} e essa lista possui ${listaIntPos.length} números.`);
 </script>
